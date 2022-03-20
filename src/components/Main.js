@@ -129,7 +129,7 @@ const Main = () => {
                           .map(todo => <TodoCard key={todo.id} todo={todo}/>)
                   }
                   {
-                      !todos.length && <p className="py-5 text-center fw-bold">Ёще нету заметок</p>
+                      !todos.length && <p className="py-5 text-center fw-bold">You don`t have todo...</p>
                   }
               </div>
            </div>
