@@ -35,7 +35,7 @@ const Main = () => {
             .then(({data}) => {
                 dispatch(getTodos(data))
             })
-    }, [todo])
+    }, [todo, dispatch])
 
     const handleInput = (e) => {
         let todo = e.target.value
