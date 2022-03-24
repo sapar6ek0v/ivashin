@@ -22,7 +22,7 @@ const Main = () => {
             categories: categories || "OTHER"
         }
 
-        axios.post(`https://6236c07cf5f6e28a15457446.mockapi.io/todos`, newTodo)
+        axios.post(`https://623c45e57efb5abea67dc816.mockapi.io/todos`, newTodo)
             .then(() => {
                 setTodo('')
             })
@@ -31,7 +31,7 @@ const Main = () => {
 
 
     useEffect(() => {
-        axios(`https://6236c07cf5f6e28a15457446.mockapi.io/todos`)
+        axios(`https://623c45e57efb5abea67dc816.mockapi.io/todos`)
             .then(({data}) => {
                 dispatch(getTodos(data))
             })

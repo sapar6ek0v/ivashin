@@ -13,14 +13,14 @@ const TodoCard = ({todo}) => {
     const dispatch = useDispatch()
 
     const onDelete = (id) => {
-        axios.delete(`https://6236c07cf5f6e28a15457446.mockapi.io/todos/${id}`)
+        axios.delete(`https://623c45e57efb5abea67dc816.mockapi.io/todos/${id}`)
             .then(() => {
                 dispatch(deleteTodo(todos.filter(todo => todo.id !== id)))
             })
     }
 
     const onEdit = (id) => {
-        axios.put(`https://6236c07cf5f6e28a15457446.mockapi.io/todos/${id}`, {todo: newTodo})
+        axios.put(`https://623c45e57efb5abea67dc816.mockapi.io/todos/${id}`, {todo: newTodo})
             .then(() => {
                 dispatch(editTodo(todos.map(todo => todo.id === id ? {...todo, todo: newTodo} : todo)))
                 setUpdate(false)
